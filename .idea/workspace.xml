@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="edcce4cd-b0be-4a48-8413-12454497a9c7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/design/U1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/design/U1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/design/U2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/design/U2.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,12 +26,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2MzAPELf2QFYGM2kSi04AL3SegR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -46,5 +52,8 @@
       <updated>1678760013967</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
