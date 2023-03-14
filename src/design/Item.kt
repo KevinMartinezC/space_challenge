@@ -1,3 +1,5 @@
 
-class Item(val name: String, val weight: Int) {
+class Item {
+    var name: String = ""
+    var weight = 0
 }
