@@ -60,4 +60,14 @@ internal class Simulation {
         }
         return u2Rockets
     }
+
+    fun runSimulation(rockets: ArrayList<Rocket>): Int {
+        var totalBudget = 0
+        for (rocket in rockets) {
+            do {
+                totalBudget += rocket.cost
+            } while (!(rocket.launch() && rocket.land()))
+        }
+        return totalBudget
+    }
 }
