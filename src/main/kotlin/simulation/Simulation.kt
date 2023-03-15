@@ -1,3 +1,7 @@
+import java.io.File
+import java.io.FileNotFoundException
+import java.util.*
+
 internal class Simulation {
     @Throws(FileNotFoundException::class)
     fun loadItems(filePath: String?): ArrayList<Item> {
