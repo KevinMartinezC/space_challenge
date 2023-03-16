@@ -1,3 +1,9 @@
+package simulation
+
+import design.Item
+import design.Rocket
+import design.U1
+import design.U2
 import java.io.File
 import java.io.FileNotFoundException
 import java.util.*
@@ -29,12 +35,12 @@ internal class Simulation {
         return itemCollection
     }
 
-    fun loadU1(itemsLoadList: ArrayList<Item>): ArrayList<Rocket> {
+    fun loadU1(itemsLoadList: ArrayList<Item>): ArrayList<Rocket> {//takes an ArrayList of "item" object as input and returns an ArrayList of design.Rocket
         val u1Rockets = ArrayList<Rocket>()
         var u1Rocket: Rocket = U1()
         for (item in itemsLoadList) {
-            if (u1Rocket.canCarry(item)) {
-                u1Rocket.carry(item)
+            if (u1Rocket.canCarry(item)) {//it checks if the current "u1Rocket" can carry it using the 'canCarry' method of the design.U1 class
+                u1Rocket.carry(item) //if the rocket can carry the item, the item is added to the rocket using the 'carry' method
             } else {
                 u1Rockets.add(u1Rocket)
                 u1Rocket = U1()
