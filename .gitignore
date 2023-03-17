@@ -1,0 +1,22 @@
+# IntelliJ project files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Gradle files
+.gradle/
+build/
+
+# Kotlin build files
+out/
+build/
+bin/
+tmp/
+lib/
+.idea_modules/
+
+# Miscellaneous
+*.class
+*.log
+.DS_Store

@@ -17,10 +17,9 @@ internal class Simulation {
             val manifestScanner = manifest?.let { Scanner(it) }
             var loadItem: Array<String>
             if (manifestScanner != null) {
-                while (manifestScanner.hasNextLine()) { //to check if there is more input available to read from the file
-                    val item = Item()                   //before attempting to read next line using nextLine()
-                    loadItem =
-                        manifestScanner.nextLine().split("=").toTypedArray()
+                while (manifestScanner.hasNextLine()) { //to check if there is more input available to read from the file before attempting to read next line using nextLine()
+                    val item = Item()
+                    loadItem = manifestScanner.nextLine().split("=").toTypedArray()
                     item.name = loadItem[0]
                     item.weight = loadItem[1].toInt()
                     itemCollection.add(item)
@@ -35,12 +34,14 @@ internal class Simulation {
         return itemCollection
     }
 
-    fun loadU1(itemsLoadList: ArrayList<Item>): ArrayList<Rocket> {//takes an ArrayList of "item" object as input and returns an ArrayList of design.Rocket
+
+    //takes an ArrayList of "item" object as input and returns an ArrayList of design.Rocket
+    fun loadU1(itemsLoadList: ArrayList<Item>): ArrayList<Rocket> {
         val u1Rockets = ArrayList<Rocket>()
         var u1Rocket: Rocket = U1()
         for (item in itemsLoadList) {
             if (u1Rocket.canCarry(item)) {//it checks if the current "u1Rocket" can carry it using the 'canCarry' method of the design.U1 class
-                u1Rocket.carry(item) //if the rocket can carry the item, the item is added to the rocket using the 'carry' method
+                u1Rocket.carry(item)       //if the rocket can carry the item, the item is added to the rocket using the 'carry' method
             } else {
                 u1Rockets.add(u1Rocket)
                 u1Rocket = U1()
@@ -72,7 +73,7 @@ internal class Simulation {
     }
 
     fun runSimulation(rockets: ArrayList<Rocket>): Int {
-        var totalBudget = 0
+        var totalBudget: Int = 0
         for (rocket in rockets) {
             do {
                 totalBudget += rocket.cost

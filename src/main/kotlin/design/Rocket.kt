@@ -1,12 +1,12 @@
 package design
 
 open class Rocket : SpaceShip {
-    var cost = 0
-    var weight = 0
-    var currentWeight = 0
-    var maxWeight = 0
-    var chanceOfLaunchFailure = 0.0
-    var chanceOfLandingFailure = 0.0
+    var cost: Int = 0
+    var weight: Int = 0
+    var currentWeight: Int = 0
+    var maxWeight: Int = 0
+    var chanceOfLaunchFailure: Double = 0.0
+    var chanceOfLandingFailure: Double = 0.0
 
     override fun launch(): Boolean {
         return true
@@ -16,14 +16,21 @@ open class Rocket : SpaceShip {
         return true
     }
 
+    /***
+     * The function checks whether the sum of the rocket's currentWeight
+     * and the item's weight is less than or equal to the maxWeight of the rocket.
+     */
     override fun canCarry(item: Item?): Boolean {
-        return currentWeight + item!!.weight <= maxWeight // The function checks whether the sum of the rocket's currentWeight
-        // and the item's weight is less than or equal to the maxWeight of the rocket.
+        return item?.let { currentWeight + it.weight <= maxWeight } ?: false
     }
 
+    /***
+     * The carry() function also takes a design.Item object as input
+     * and updates the currentWeight property of the rocket by adding the item's weight to it.
+     */
     override fun carry(item: Item?) {
-        currentWeight += item!!.weight //The carry() function also takes an design.Item object as input
-        // and updates the currentWeight property of the rocket by adding the item's weight to it.
-
+        item?.let {
+            currentWeight += item.weight
+        }
     }
 }

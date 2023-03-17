@@ -2,5 +2,5 @@ package design
 
 class Item {
     var name: String = ""
-    var weight = 0
+    var weight: Int = 0
 }
